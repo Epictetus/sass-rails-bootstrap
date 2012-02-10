@@ -1,4 +1,4 @@
 = SassRailsBootstrap
 
 Reflects the Bootstrap version up to the commit:
-https://github.com/twitter/bootstrap/commit/f68f7870efd4e56dc1d651dc5de37b265558fce1
+https://github.com/twitter/bootstrap/commit/b0bd3efc4a5fba45020541115ec21ae7574442c7
