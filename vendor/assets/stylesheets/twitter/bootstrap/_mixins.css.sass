@@ -391,7 +391,9 @@
   background-image: -o-linear-gradient(left, $startColor, $endColor)  // Opera 11.10
   background-image: linear-gradient(left, $startColor, $endColor)  // Le standard
   background-repeat: repeat-x
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$startColor}', endColorstr='#{$endColor}', GradientType=1)  // IE9 and down
+  $ieStartColor: rgb(red($startColor), green($startColor), blue($startColor))
+  $ieEndColor: rgb(red($endColor), green($endColor), blue($endColor))
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$ieStartColor}', endColorstr='#{$ieEndColor}', GradientType=1)  // IE9 and down
 =gradient-vertical($startColor: #555, $endColor: #333)
   background-color: mix($startColor, $endColor, 60%)
   background-image: -moz-linear-gradient(top, $startColor, $endColor)  // FF 3.6+
@@ -401,7 +403,9 @@
   background-image: -o-linear-gradient(top, $startColor, $endColor)  // Opera 11.10
   background-image: linear-gradient(top, $startColor, $endColor)  // The standard
   background-repeat: repeat-x
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$startColor}', endColorstr='#{$endColor}', GradientType=0)  // IE9 and down
+  $ieStartColor: rgb(red($startColor), green($startColor), blue($startColor))
+  $ieEndColor: rgb(red($endColor), green($endColor), blue($endColor))
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$ieStartColor}', endColorstr='#{$ieEndColor}', GradientType=0)  // IE9 and down
 =gradient-directional($startColor: #555, $endColor: #333, $deg: 45deg)
   background-color: $endColor
   background-repeat: repeat-x
@@ -419,7 +423,9 @@
   background-image: -o-linear-gradient($startColor, $midColor $colorStop, $endColor)
   background-image: linear-gradient($startColor, $midColor $colorStop, $endColor)
   background-repeat: no-repeat
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$startColor}', endColorstr='#{$endColor}', GradientType=0)  // IE9 and down
+  $ieStartColor: rgb(red($startColor), green($startColor), blue($startColor))
+  $ieEndColor: rgb(red($endColor), green($endColor), blue($endColor))
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$ieStartColor}', endColorstr='#{$ieEndColor}', GradientType=0)  // IE9 and down
 =gradient-radial($innerColor: #555, $outerColor: #333)
   background-color: $outerColor
   background-image: -webkit-gradient(radial, center center, 0, center center, 460, from($innerColor), to($outerColor))
